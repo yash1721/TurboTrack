@@ -136,7 +136,7 @@ app.post("/login", async (request, response) => {
             else if (err) throw err;
 
 
-            if (res.password == password) {
+            if (res && res.password == password) {
                 return response.redirect('index.html');
             }
             else {
